@@ -15,7 +15,7 @@ function Skill() {
 						efficiency and expeditiousness, employing the latest cutting-edge
 						technologies.
 					</p>
-					<div className="skill-button-container">
+					<div key={"skill"} className="skill-button-container">
 						<span className="skill-button-box">
 							<button
 								className="skill-button"
@@ -29,7 +29,7 @@ function Skill() {
 						</span>
 					</div>
 				</div>
-				<div key={"img"} className="skill-img">
+				<div key={"tools"} className="skill-img">
 					{skill === "skill"
 						? skillData.map((item, index) => (
 								<>

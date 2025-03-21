@@ -1,6 +1,12 @@
 import React from "react";
 import profileImg from "../assets/Animation-1742208975258-ezgif.com-gif-to-webp-converter.webp";
+import tpa from "../assets/turnpike.jpeg";
+import cn from "../assets/coding ninjas.png";
+import { Link, useLocation } from "react-router-dom";
+import AboutContact from "./AboutContact";
 function About() {
+	const location = useLocation();
+
 	return (
 		<div className="about-container">
 			<h2>About</h2>
@@ -9,7 +15,9 @@ function About() {
 					<img src={profileImg} alt="" />
 				</div>
 				<div className="profile-detail">
-					<h3>About me</h3>
+					<h3>
+						About me <span className="animate-pulse">.</span>
+					</h3>
 					<p>
 						I'm a passionate software developer. I enjoy building web
 						applications and constantly strive to improve. My goal is to create
@@ -50,17 +58,48 @@ function About() {
 					</div>
 				</div>
 			</div>
-			<div className="profile-experience">
-				<h3>Experience</h3>
-				<div>
-					<img src="" alt="" />
-					<p></p>
+			{location.pathname === "/about" ? (
+				<div className="profile-experience">
+					<h3>Experience</h3>
+					<div className="exp-1 exp">
+						<img src={tpa} alt="" className="w-[100px]" />
+						<div className="exp-details">
+							<div className="exp-details-company">
+								<span>TurnPike Analyst</span>
+								<span>June-2023 - July-2024</span>
+							</div>
+							<p>
+								Experienced backend developer skilled in Node.js, Express.js,
+								MongoDB, and MySQL, optimizing APIs for 30% faster responses.
+								Improved system throughput by 15%, ensured data integrity, and
+								enhanced data visualization using Python dashboards. 🚀
+							</p>
+						</div>
+					</div>
+					<div className="exp-2 exp ">
+						<img src={cn} alt="" className="w-[100px] rounded-2xl" />
+						<div className="exp-details">
+							<div className="exp-details-company">
+								<span>Coding Ninjas</span>
+								<span>Sept-2022 - Jan-2023</span>
+							</div>
+							<p>
+								Mentored students in Data Structures, Debugging, and
+								Problem-Solving, resolving 482+ Python queries with a 4.57
+								rating. Contributed to curriculum development and student
+								assessments for improved learning outcomes. 🎯🚀
+							</p>
+						</div>
+					</div>
 				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
+			) : (
+				<div className="go-about">
+					<Link to="/about" className="go-project-link animate-bounce">
+						View More
+					</Link>
 				</div>
-			</div>
+			)}
+			<AboutContact></AboutContact>
 		</div>
 	);
 }

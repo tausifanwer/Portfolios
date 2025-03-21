@@ -53,7 +53,7 @@ nav {
 }
 
 .header h1 {
-    font-size: 1.3vw;
+    font-size: 1.7rem;
     font-weight: 700;
     cursor: pointer;
     padding-block: 1.1vw;
@@ -62,7 +62,7 @@ nav {
 }
 
 nav>a {
-    font-size: 1.1vw;
+    font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
     padding-block: 1.1vw;
@@ -71,7 +71,7 @@ nav>a {
 
 
 .Resume>a {
-    font-size: 1.1vw;
+    font-size: 1.3rem;
     font-weight: 600;
     cursor: pointer;
     padding-block: 0.6vw;
@@ -96,20 +96,20 @@ nav>a {
 
 .landing-content {
     width: 65%;
-    padding: 4vw;
+    padding: 2vw;
 }
 
 .landing-content>span {
-    font-size: 2.5vw;
+    font-size: 3rem;
     font-family: "Caveat", cursive;
 }
 
 .landing-content>p {
-    font-size: 1.5vw;
+    font-size: 2rem;
 }
 
 .landing-content>h1>span {
-    font-size: 4vw;
+    font-size: 4.5rem;
     font-family: "Caveat", cursive;
     color: #6ac3f0;
 }
@@ -173,7 +173,7 @@ nav>a {
 }
 
 .project>h2 {
-    font-size: 4.5vw;
+    font-size: 5rem;
     font-family: "Caveat", cursive;
 
 }
@@ -220,12 +220,12 @@ nav>a {
 }
 
 .p-1-content h3 {
-    font-size: 1.5vw;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .p-1-content>p {
-    font-size: 1vw;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
@@ -236,13 +236,13 @@ nav>a {
 }
 
 .p-1-content>span {
-    font-size: 1vw;
+    font-size: 1.3rem;
     font-weight: 700;
 }
 
 .p-1-content>a {
     padding: 0.6vw;
-    font-size: 1vw;
+    font-size: 1.2rem;
     font-weight: 700;
     background-color: #6ac3f0;
     border-radius: 14px;
@@ -357,7 +357,7 @@ nav>a {
 }
 
 .go-project>a {
-    font-size: 1.2vw;
+    font-size: 1.7rem;
     font-weight: 700;
     padding: 0.7rem;
     background: linear-gradient(#6ac3f059, #46b7f0);
@@ -374,12 +374,12 @@ nav>a {
 .skill-tools-container {
     max-width: 1440px;
     margin-inline: auto;
-    padding-block: 4vw;
+    padding: 4vw;
 
 }
 
 .skill-tools-container>h2 {
-    font-size: 4.5vw;
+    font-size: 5rem;
     font-family: "Caveat", cursive;
     margin-bottom: 1rem;
 }
@@ -391,19 +391,17 @@ nav>a {
 
 .skill-detail {
     width: 60%;
-    /* padding: 2vw;
-    padding-block: 0px; */
 }
 
 .skill-detail>h2 {
-    font-size: 2vw;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1vw;
     color: #6ac3f0;
 }
 
 .skill-detail>p {
-    font-size: 1.1vw;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 1vw;
 }
@@ -423,7 +421,7 @@ nav>a {
     padding: 0.6vw;
     background-color: #6ac3f0;
     border-radius: 14px;
-    font-size: 1vw;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-right: 10px;
 }
@@ -432,7 +430,7 @@ nav>a {
     padding: 0.6vw;
     background-color: #6ac3f0;
     border-radius: 14px;
-    font-size: 1vw;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -458,11 +456,11 @@ nav>a {
 .about-container {
     max-width: 1440px;
     margin-inline: auto;
-    padding-block: 4vw;
+    padding: 4vw;
 }
 
 .about-container>h2 {
-    font-size: 4.5vw;
+    font-size: 5rem;
     font-family: "Caveat", cursive;
 }
 
@@ -479,6 +477,10 @@ nav>a {
 
 }
 
+.profile-link>a {
+    font-weight: 600;
+}
+
 .profile-img {
     width: 40%;
     display: flex;
@@ -491,26 +493,25 @@ nav>a {
 }
 
 .profile-detail>h3 {
-    font-size: 2vw;
+    font-size: 2.4rem;
     font-weight: 600;
 }
 
-.profile-detail>h3::after {
-    content: ".";
-    font-size: 5vw;
+.profile-detail>h3>span {
+    font-size: 4.7rem;
     border-radius: 50%;
     color: #6ac3f0;
 }
 
 .profile-detail>p {
-    font-size: 1vw;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
 .profile-resume {
     display: flex;
     align-items: center;
-    background-color: bisque;
+    background-color: tomato;
     padding: 0.7rem;
     border-radius: 15px;
 }
@@ -518,6 +519,124 @@ nav>a {
 .profile-experience {
     margin-top: 1rem;
     padding: 2vw;
+}
+
+.profile-experience>h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+
+}
+
+.exp {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.exp>img {
+    align-self: flex-start;
+}
+
+.exp-details {
+    padding: 6vw;
+    padding-block: 0;
+}
+
+.exp-2 {
+    margin-top: 4rem;
+}
+
+.exp-details>p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.exp-details-company {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp-details-company>span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.go-about {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    margin-top: 4rem;
+}
+
+.go-about>a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.7rem;
+    background: linear-gradient(#6ac3f059, #46b7f0);
+    border-radius: 14px;
+}
+
+.go-about>a:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}
+
+/* aboutContact */
+.AboutContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#6ac3f059, #46b7f0);
+    padding: 2.5rem;
+    border-radius: 20px;
+}
+
+
+.AboutContact>span {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+
+.AboutContact>a {
+    background-color: tomato;
+    padding: 1.5rem;
+    border-radius: 16px;
+}
+
+
+.AboutContact>a>span {
+    font-weight: 700;
+}
+
+
+.email-copy {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+
+}
+
+
+.email-text {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+
+.contact-links {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 @media (max-width: 600px) {
@@ -770,5 +889,81 @@ nav>a {
         margin-bottom: 1rem;
     }
 
+    .about-subContainer {
+        flex-direction: column;
+    }
 
+    .profile-img,
+    .profile-detail {
+        width: unset;
+    }
+
+    .profile-detail>h3 {
+        font-size: 2rem;
+    }
+
+    .profile-detail>h3>span {
+        font-size: 10vw;
+    }
+
+    .profile-detail>p {
+        font-size: 1rem;
+    }
+
+    .profile-link {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .go-about>a {
+        font-size: 0.7rem;
+    }
+
+    .profile-experience>h3 {
+        font-size: 2rem;
+    }
+
+
+    .exp {
+        flex-direction: column;
+    }
+
+    .exp-details-company>span {
+        font-size: 0.9rem;
+    }
+
+    .exp-details>p {
+        font-size: 1rem;
+    }
+
+    .AboutContact {
+        padding: 1rem
+    }
+
+    .AboutContact>span {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .AboutContact>a {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .email-text {
+        font-size: 1.2rem;
+    }
+
+    .contact-links {
+        gap: 0.5rem;
+        flex-direction: column;
+
+    }
+
+    .linkss {
+        gap: 0.5rem;
+        padding: 0;
+        font-size: 1rem;
+
+    }
 }
