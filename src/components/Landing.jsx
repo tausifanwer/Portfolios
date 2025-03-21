@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import landingImg from "../assets/Animation - 1742208975258.gif";
+import landingImg from "../assets/Animation-1742208975258-ezgif.com-gif-to-webp-converter.webp";
 function Landing() {
 	return (
 		<div className="landing-container" id="home">

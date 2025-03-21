@@ -4,7 +4,6 @@ import Contact from "./Contact";
 import Project from "./Project";
 import Skill from "./Skill";
 import About from "./About";
-import Header from "./header";
 
 function Home() {
 	return (

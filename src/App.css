@@ -348,6 +348,28 @@ nav>a {
     text-align: center;
 }
 
+.go-project {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.go-project>a {
+    font-size: 1.2vw;
+    font-weight: 700;
+    padding: 0.7rem;
+    background: linear-gradient(#6ac3f059, #46b7f0);
+    border-radius: 14px;
+}
+
+.go-project-link:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+
+}
+
 /* skill */
 .skill-tools-container {
     max-width: 1440px;
@@ -377,6 +399,7 @@ nav>a {
     font-size: 2vw;
     font-weight: 700;
     margin-bottom: 1vw;
+    color: #6ac3f0;
 }
 
 .skill-detail>p {
@@ -441,6 +464,60 @@ nav>a {
 .about-container>h2 {
     font-size: 4.5vw;
     font-family: "Caveat", cursive;
+}
+
+.about-subContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-link {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+.profile-img {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-detail {
+    width: 60%;
+}
+
+.profile-detail>h3 {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.profile-detail>h3::after {
+    content: ".";
+    font-size: 5vw;
+    border-radius: 50%;
+    color: #6ac3f0;
+}
+
+.profile-detail>p {
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.profile-resume {
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+    padding: 0.7rem;
+    border-radius: 15px;
+}
+
+.profile-experience {
+    margin-top: 1rem;
+    padding: 2vw;
 }
 
 @media (max-width: 600px) {
@@ -626,6 +703,10 @@ nav>a {
         margin-bottom: 1rem;
     }
 
+    .go-project>a {
+        font-size: 0.7rem;
+    }
+
     /* skill */
     .skill-tools-container {
         margin-top: 3rem;
@@ -688,4 +769,6 @@ nav>a {
         font-size: 14vw;
         margin-bottom: 1rem;
     }
+
+
 }

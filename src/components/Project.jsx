@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { proData } from "../store/project-data";
 import git from "../assets/github-icon.svg";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Project() {
 	const [hoveredIndex, setHoveredIndex] = useState(null);
 	const [hoverGit, setHoverGit] = useState(null);
-
+	const location = useLocation();
+	const displayProject =
+		location.pathname === "/" ? proData.slice(0, 2) : proData;
 	const handleHoverGitShow = (id) => {
 		setHoverGit(id);
 	};
@@ -24,7 +28,6 @@ function Project() {
 	useEffect(() => {
 		const handleResize = () => {
 			setIsMobile(window.innerWidth <= 1024);
-			console.log(isMobile);
 		};
 
 		window.addEventListener("resize", handleResize);
@@ -67,7 +70,7 @@ function Project() {
 							</>
 						);
 				  })
-				: proData.map((item, index) => (
+				: displayProject.map((item, index) => (
 						<div className="p-1" key={index}>
 							{index % 2 === 0 ? (
 								<>
@@ -170,6 +173,13 @@ function Project() {
 							)}
 						</div>
 				  ))}
+			{window.location.pathname === "/" ? (
+				<div className="go-project">
+					<Link to="/project" className="go-project-link animate-bounce">
+						View More
+					</Link>
+				</div>
+			) : null}
 		</div>
 	);
 }
