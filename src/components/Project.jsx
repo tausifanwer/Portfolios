@@ -40,7 +40,7 @@ function Project() {
 		<div className="project" id="project">
 			<h2>Projects</h2>
 			{isMobile
-				? proData.map((item, index) => {
+				? displayProject.map((item, index) => {
 						return (
 							<div className="p-1">
 								<div className="p-1-img">
@@ -53,7 +53,7 @@ function Project() {
 											<a
 												href={item.live}
 												target="_blank"
-												className="text-red-700 font-medium cursor-pointer animate-bounce animate-pulse"
+												className="text-red-700 font-medium cursor-pointer animate-bounce "
 											>
 												Live
 											</a>
@@ -97,7 +97,7 @@ function Project() {
 												<a
 													href={item.live}
 													target="_blank"
-													className="text-red-700 font-medium cursor-pointer animate-bounce animate-pulse"
+													className="text-red-700 font-medium cursor-pointer animate-bounce"
 												>
 													Live
 												</a>
