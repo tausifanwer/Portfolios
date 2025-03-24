@@ -1,5 +1,5 @@
 import React from "react";
-import profileImg from "../assets/Animation-1742208975258-ezgif.com-gif-to-webp-converter.webp";
+import profileImg from "../assets/profile pic.png";
 import tpa from "../assets/turnpike.jpeg";
 import cn from "../assets/coding ninjas.png";
 import { Link, useLocation } from "react-router-dom";
@@ -13,7 +13,7 @@ function About() {
 			<h2>About</h2>
 			<div className="about-subContainer">
 				<div className="profile-img">
-					<img src={profileImg} alt="" />
+					<img src={profileImg} alt="" loading="lazy" />
 				</div>
 				<div className="profile-detail">
 					<h3>
