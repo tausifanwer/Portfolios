@@ -15,32 +15,34 @@ function Skill() {
 						efficiency and expeditiousness, employing the latest cutting-edge
 						technologies.
 					</p>
-					<div key={"skill"} className="skill-button-container">
+					<div className="skill-button-container">
 						<span className="skill-button-box">
 							<button
-								className="skill-button"
+								className="skill-button cursor-pointer"
 								onClick={() => setSkill("skill")}
 							>
 								Skills
 							</button>
-							<button className="tool-button" onClick={() => setSkill("tool")}>
+							<button
+								className="tool-button cursor-pointer"
+								onClick={() => setSkill("tool")}
+							>
 								Tools
 							</button>
 						</span>
 					</div>
 				</div>
-				<div key={"tools"} className="skill-img">
+				<div className="skill-img">
 					{skill === "skill"
 						? skillData.map((item, index) => (
-								<>
-									<img key={index} src={item} alt="" />
-									{/* <span>{skillName[index]}</span> */}
-								</>
+								<div key={`skill-${index}`}>
+									<img src={item} alt={`skill-${index}`} />
+								</div>
 						  ))
 						: toolsData.map((item, index) => (
-								<>
-									<img key={index} src={item} alt="" />
-								</>
+								<div key={`tools-${index}`}>
+									<img src={item} alt={`tools-${index}`} />
+								</div>
 						  ))}
 				</div>
 			</div>

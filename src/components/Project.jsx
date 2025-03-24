@@ -42,12 +42,23 @@ function Project() {
 			{isMobile
 				? proData.map((item, index) => {
 						return (
-							<>
+							<div className="p-1">
 								<div className="p-1-img">
 									<img src={item.proImg} alt="" />
 								</div>
 								<div className="p-1-content">
-									<h3>{item.title}</h3>
+									<div className="flex items-center gap-1">
+										<h3>{item.title}</h3>
+										{item.live && (
+											<a
+												href={item.live}
+												target="_blank"
+												className="text-red-700 font-medium cursor-pointer animate-bounce animate-pulse"
+											>
+												Live
+											</a>
+										)}
+									</div>
 									<p>{item.content}</p>
 									<span>Technologies Used</span>
 									<div className="toolkit">
@@ -65,9 +76,11 @@ function Project() {
 											))}
 										</div>
 									</div>
-									<a href="#">Visit</a>
+									<a href={item.projectLink} target="_blank">
+										Visit
+									</a>
 								</div>
-							</>
+							</div>
 						);
 				  })
 				: displayProject.map((item, index) => (
@@ -78,7 +91,18 @@ function Project() {
 										<img src={item.proImg} alt="" />
 									</div>
 									<div className="p-1-content">
-										<h3>{item.title}</h3>
+										<div className="flex items-center gap-1">
+											<h3>{item.title}</h3>
+											{item.live && (
+												<a
+													href={item.live}
+													target="_blank"
+													className="text-red-700 font-medium cursor-pointer animate-bounce animate-pulse"
+												>
+													Live
+												</a>
+											)}
+										</div>
 										<p>{item.content}</p>
 										<span>Technologies Used</span>
 										<div className="toolkit">
@@ -110,7 +134,7 @@ function Project() {
 											onMouseEnter={() => handleHoverGitShow(index)}
 											onMouseLeave={handleHoverGitHide}
 										>
-											<a href="">
+											<a href={item.projectLink} target="_blank">
 												<img src={git} alt="" />
 												<span
 													className={hoverGit === index ? "showGit" : "hideGit"}
@@ -124,7 +148,18 @@ function Project() {
 							) : (
 								<>
 									<div className="p-1-content">
-										<h3>{item.title}</h3>
+										<div className="flex items-center gap-1">
+											<h3>{item.title}</h3>
+											{item.live && (
+												<a
+													href={item.live}
+													target="_blank"
+													className="text-red-700 font-medium cursor-pointer animate-pulse "
+												>
+													Live
+												</a>
+											)}
+										</div>
 										<p>{item.content}</p>
 										<span>Technologies Used</span>
 										<div className="toolkit">
@@ -156,7 +191,7 @@ function Project() {
 											onMouseEnter={() => handleHoverGitShow(index)} // ✅ Correct way
 											onMouseLeave={handleHoverGitHide}
 										>
-											<a href="">
+											<a href={item.projectLink} target="_blank">
 												<img src={git} alt="" />
 												<span
 													className={hoverGit === index ? "showGit" : "hideGit"}

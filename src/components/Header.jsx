@@ -3,6 +3,7 @@ import "../App.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Tausif_Anwer_Resume from "../assets/TAUSIF ANWER Resume De2.pdf";
 function Header() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const handleToggleNav = () => {
@@ -36,10 +37,11 @@ function Header() {
 								<Link to="/about" onClick={closeNav}>
 									About
 								</Link>
-								<a href="">Contact</a>
 							</nav>
 							<div className="Resume">
-								<a href="">Resume</a>
+								<a href={Tausif_Anwer_Resume} download="Tausif Anwer Resume">
+									Resume
+								</a>
 							</div>
 						</div>
 						<div className="close" onClick={handleToggleNav}>

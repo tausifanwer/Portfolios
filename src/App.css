@@ -5,6 +5,19 @@
     font-family: "Quicksand", sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #6ac3f0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #07d8eb;
+}
 
 .header-container {
     position: fixed;
@@ -12,8 +25,8 @@
     width: 100%;
     left: 0;
     z-index: 9999;
-    background-color: whitesmoke
-        /* backdrop-filter: blur(5px); */
+    background-color: #6ac3f0;
+
 }
 
 .header {
@@ -92,6 +105,7 @@ nav>a {
     margin-inline: auto;
     display: flex;
     position: relative;
+
 }
 
 .landing-content {
@@ -125,7 +139,7 @@ nav>a {
     display: flex;
     gap: 10px;
     padding: 0.8vw;
-    background-color: #6ac3f0;
+    background: linear-gradient(#6ac3f059, #46b7f0);
     border-radius: 10px;
     align-items: center;
 }
@@ -181,18 +195,27 @@ nav>a {
 .p-1 {
     display: flex;
     gap: 5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
+    padding: 0.8rem;
+    border: 0.5px solid rgb(156 163 175 / var(--tw-border-opacity, 1));
+    border-radius: 8px;
+}
+
+.p-1:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 4px 4px 0px #000000df;
 }
 
 .p-1-img {
     width: 50%;
-    background-color: rgba(255, 255, 0, 0.658);
+    background-color: rgb(255 219 0 / 45%);
     padding-block: 0.2vw;
     padding-inline: 1vw;
     border-radius: 15px;
     overflow: hidden;
     padding-bottom: 0;
-    max-height: 14vw;
+    max-height: 18rem;
 }
 
 .p-1-img>img {
@@ -225,8 +248,9 @@ nav>a {
 }
 
 .p-1-content>p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
+    padding: 1rem;
 }
 
 .p-1-content>span::before {
@@ -244,7 +268,7 @@ nav>a {
     padding: 0.6vw;
     font-size: 1.2rem;
     font-weight: 700;
-    background-color: #6ac3f0;
+    background: linear-gradient(#6ac3f059, #46b7f0);
     border-radius: 14px;
 
 }
@@ -259,8 +283,8 @@ nav>a {
 }
 
 .git>a>img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 
@@ -321,9 +345,10 @@ nav>a {
 
 .tech-name>img {
 
-    width: 60px;
-    height: 60px;
-    background-color: rgba(90, 86, 86, 0.377);
+    width: 50px;
+    height: 50px;
+    border: 0.5px solid rgb(156 163 175 / var(--tw-border-opacity, 1));
+    border-radius: 8px;
     padding: 6px;
     border-radius: 8px;
     cursor: pointer;
@@ -357,7 +382,7 @@ nav>a {
 }
 
 .go-project>a {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: 700;
     padding: 0.7rem;
     background: linear-gradient(#6ac3f059, #46b7f0);
@@ -419,7 +444,7 @@ nav>a {
 
 .skill-button {
     padding: 0.6vw;
-    background-color: #6ac3f0;
+    background: linear-gradient(#6ac3f059, #46b7f0);
     border-radius: 14px;
     font-size: 1.2rem;
     font-weight: 600;
@@ -428,14 +453,14 @@ nav>a {
 
 .tool-button {
     padding: 0.6vw;
-    background-color: #6ac3f0;
+    background: linear-gradient(#6ac3f059, #46b7f0);
     border-radius: 14px;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
 .skill-img {
-    width: 40%;
+    width: 30%;
     padding: 2vw;
     padding-block: 0px;
     display: grid;
@@ -444,12 +469,17 @@ nav>a {
     align-items: center;
 }
 
-.skill-img>img {
+.skill-img>div {
     width: 70%;
     background-color: ivory;
     padding: 0.3vw;
 
     /* height: 60px; */
+}
+
+.skill-img>div>img {
+    width: 100%;
+
 }
 
 /* about */
@@ -534,6 +564,16 @@ nav>a {
     flex-direction: row;
     align-items: center;
     margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 0.5px solid rgb(156 163 175 / var(--tw-border-opacity, 1));
+
+}
+
+.exp:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 4px 4px 0px #000000df;
 }
 
 .exp>img {
@@ -550,7 +590,7 @@ nav>a {
 }
 
 .exp-details>p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -606,14 +646,15 @@ nav>a {
 }
 
 
-.AboutContact>a {
+.AboutContact>button {
     background-color: tomato;
     padding: 1.5rem;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 
-.AboutContact>a>span {
+.AboutContact>button>span {
     font-weight: 700;
 }
 
@@ -639,6 +680,37 @@ nav>a {
     padding-bottom: 1.5rem;
 }
 
+/* footer */
+.footer {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 4vw;
+    padding-block: 1vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer>div {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1vw;
+}
+
+.available {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+
+.available>span {
+    display: inline-block;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
 @media (max-width: 600px) {
     .header-container {
         padding-block: 2vw;
@@ -659,8 +731,8 @@ nav>a {
         width: 100%;
         height: 100%;
         z-index: 100;
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         top: 0;
         left: 0;
         align-items: unset;
@@ -687,9 +759,9 @@ nav>a {
 
     .Resume>a {
         font-size: 6vw;
-        padding-inline: 1vw;
+        padding: 1.4vw;
         text-align: center;
-        border-radius: 0.8vw;
+        border-radius: 10px
     }
 
     .hamburger,
@@ -700,7 +772,7 @@ nav>a {
     }
 
     .close {
-        color: white;
+        /* color: white; */
         font-size: xx-large;
     }
 
@@ -716,7 +788,9 @@ nav>a {
     .landing-container {
         flex-direction: column;
         min-height: unset;
-        margin-top: 10vh
+        margin-top: 10vh;
+        padding: 4vw;
+        padding-top: 0;
     }
 
     .landing-gif {
@@ -767,6 +841,7 @@ nav>a {
     /* project */
     .project {
         margin-top: 3rem;
+        padding: 1.5rem;
     }
 
     .p-1 {
@@ -794,7 +869,7 @@ nav>a {
     }
 
     .p-1-content>p {
-        font-size: 5.5vw
+        font-size: 4.2vw
     }
 
     .p-1-content>span {
@@ -867,16 +942,18 @@ nav>a {
     }
 
     .skill-img {
-        width: 100%;
+        margin-inline: auto;
+        width: 70%;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
         align-items: center;
 
     }
 
-    .skill-img>img {
+    .skill-img>div {
         width: 45%;
     }
+
 
     /* about */
     .about-container {
@@ -964,6 +1041,14 @@ nav>a {
         gap: 0.5rem;
         padding: 0;
         font-size: 1rem;
+    }
 
+    /* footer */
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer>div {
+        font-size: 0.8rem;
     }
 }
