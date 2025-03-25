@@ -1,9 +1,8 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Header from "./components/header";
+import Header from "./components/Header";
 import Home from "./components/Home";
-import Landing from "./components/Landing";
 import Project from "./components/Project";
 import ScrollToTop from "./components/ScrollTop";
 import Skill from "./components/Skill";
@@ -14,6 +13,7 @@ function App() {
 		<Router>
 			<Header></Header>
 			<ScrollToTop />
+
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/project" element={<Project />} />

@@ -716,6 +716,333 @@ nav>a {
     border-radius: 50%;
 }
 
+@media (max-width: 1024px) {
+    .header-container {
+
+        padding-block: 0.1vw;
+        padding-inline: 2.6vw;
+        background-color: #6ac3f0;
+    }
+
+    .header {
+        position: relative;
+    }
+
+
+
+    .nav-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: white;
+        color: black;
+        top: 0;
+        left: 0;
+        align-items: unset;
+        flex-grow: unset;
+        padding: 9vw;
+
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        gap: 28px;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-inline: unset
+    }
+
+    nav>a {
+        font-size: 5vw;
+    }
+
+    .Resume>a {
+        font-size: 4.5vw;
+        padding: 1.4vw;
+        text-align: center;
+        border-radius: 10px
+    }
+
+    .hamburger,
+    .close {
+        display: block;
+        font-size: 8vw;
+        font-weight: 900;
+    }
+
+    .close {
+        /* color: white; */
+        font-size: xx-large;
+    }
+
+    .on {
+        display: block;
+    }
+
+    .off {
+        display: none;
+    }
+
+    /* landing */
+    .landing-container {
+
+        flex-direction: column;
+        min-height: unset;
+        margin-top: 10vh;
+        padding: 4vw;
+        padding-top: 0;
+    }
+
+    .landing-gif {
+        padding-top: 0;
+        width: unset;
+    }
+
+    .landing-content {
+        width: unset;
+        padding-bottom: 0;
+    }
+
+    .landing-content>span {
+        font-size: 9vw;
+    }
+
+    .landing-content>h1>span {
+        font-size: 12vw;
+    }
+
+    .landing-content>p {
+        font-size: 5.5vw;
+    }
+
+    .button-talk {
+        margin-top: 8vw;
+    }
+
+    .button-talk>button {
+        padding: 3vw;
+    }
+
+    /* contact */
+    .contact {
+        right: 0;
+        top: 85vw;
+    }
+
+    .contact>a>img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* project */
+    .project {
+        overflow: hidden;
+        margin-top: 3rem;
+        padding: 1.5rem;
+    }
+
+    .p-1 {
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+
+    .p-1-img {
+        width: 100%;
+        max-height: unset;
+    }
+
+    .p-1-img>img {
+        top: 5vw
+    }
+
+    .p-1-content {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .p-1-content h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .p-1-content>p {
+        font-size: 1.4rem;
+    }
+
+    .p-1-content>span {
+        font-size: 1.7rem;
+    }
+
+    .p-1-content>a {
+        margin-top: 1rem;
+        font-size: 3vw;
+        padding: 2vw;
+
+    }
+
+    .toolkit {
+        margin-bottom: 1rem;
+    }
+
+    /* skill */
+    .skill-tools-container {
+        margin-top: -1rem;
+        padding: 4vw;
+    }
+
+    .skill-tools-container>h2 {
+        font-size: 14vw;
+        margin-bottom: 1rem;
+
+    }
+
+    .skill-container {
+        flex-direction: column;
+    }
+
+    .skill-detail {
+        width: 100%;
+    }
+
+    .skill-detail>h2 {
+        font-size: 3vmax;
+    }
+
+    .skill-detail>p {
+        font-size: 1.4rem;
+    }
+
+    .skill-button-container {
+        justify-content: center;
+        margin-block: 1rem;
+    }
+
+    .skill-button,
+    .tool-button {
+        padding: 1vw;
+        font-size: 2vmax;
+
+    }
+
+    .skill-img {
+        margin-inline: auto;
+        width: 60%;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .skill-img>div {
+        width: 45%;
+    }
+
+
+    /* about */
+    .about-container {
+        margin-top: 3rem;
+        padding: 4vw;
+    }
+
+    .about-container>h2 {
+        font-size: 14vw;
+        margin-bottom: 1rem;
+    }
+
+    .about-subContainer {
+        flex-direction: column;
+    }
+
+    .profile-img,
+    .profile-detail {
+        width: unset;
+    }
+
+    .profile-detail>h3 {
+        font-size: 2rem;
+    }
+
+    .profile-detail>h3>span {
+        font-size: 10vw;
+    }
+
+    .profile-detail>p {
+        font-size: 1.4rem;
+    }
+
+    .profile-link {
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .profile-experience>h3 {
+        font-size: 2rem;
+    }
+
+
+    .exp {
+        flex-direction: column;
+    }
+
+    .exp-details-company>span {
+        font-size: 0.9rem;
+    }
+
+    .exp-details>p {
+        font-size: 1rem;
+    }
+
+    .AboutContact {
+        padding: 1rem
+    }
+
+    .AboutContact>span {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .AboutContact>a {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .email-text {
+        font-size: 1.2rem;
+    }
+
+    .contact-links {
+        gap: 0.5rem;
+        flex-direction: column;
+
+    }
+
+    .linkss {
+        gap: 0.5rem;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    /* footer */
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer>div {
+        font-size: 0.8rem;
+    }
+
+
+
+
+}
+
 @media (max-width: 600px) {
     .header-container {
         padding-block: 2vw;
