@@ -83,7 +83,7 @@ function About() {
 						<div className="exp-details">
 							<div className="exp-details-company">
 								<span>TurnPike Analyst</span>
-								<span>June-2023 - July-2024</span>
+								<span>June-2023 - Dec-2024</span>
 							</div>
 							<p>
 								Experienced backend developer skilled in Node.js, Express.js,
