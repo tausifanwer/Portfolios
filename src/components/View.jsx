@@ -8,8 +8,9 @@ function View() {
 	const [count, setCount] = useState(0);
 
 	useEffect(() => {
+		let intervalId;
+
 		const fetchCount = async () => {
-			const hasViewed = localStorage.getItem("hasViewed");
 			const countRef = ref(db, "viewCount");
 
 			const formatter = new Intl.NumberFormat("en", {
@@ -24,21 +25,47 @@ function View() {
 
 				// Update UI
 				setCount(formatter.format(currentCount));
+			} catch (error) {
+				console.error("Error fetching view count:", error);
+			}
+		};
 
-				// Increment only if user hasn't viewed yet
+		const incrementIfFirstVisit = async () => {
+			const hasViewed = localStorage.getItem("hasViewed");
+			const countRef = ref(db, "viewCount");
+
+			try {
+				const snapshot = await get(countRef);
+				const data = snapshot.val();
+				const currentCount = data?.count || 0;
+
 				if (!hasViewed) {
 					const newCount = currentCount + 1;
 					await set(countRef, { count: newCount });
 					localStorage.setItem("hasViewed", "true");
 
-					setCount(formatter.format(newCount));
+					setCount(
+						new Intl.NumberFormat("en", {
+							notation: "compact",
+							compactDisplay: "short",
+						}).format(newCount)
+					);
 				}
 			} catch (error) {
-				console.error("Error fetching or updating view count:", error);
+				console.error("Error incrementing view count:", error);
 			}
 		};
 
+		incrementIfFirstVisit();
 		fetchCount();
+
+		// Poll every 10 seconds to update the count
+		intervalId = setInterval(() => {
+			fetchCount();
+		}, 100); // every 10 seconds
+
+		// Clear interval when component unmounts
+		return () => clearInterval(intervalId);
 	}, []);
 
 	return (
