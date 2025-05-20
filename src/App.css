@@ -731,8 +731,8 @@ nav>a {
 .view {
     display: flex;
     border: 1.5px solid rgba(126, 124, 124, 0.505);
-    max-width: 4rem;
-    min-width: 3.5rem;
+
+    min-width: 4.7rem;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 8px;

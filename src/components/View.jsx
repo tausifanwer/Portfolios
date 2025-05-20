@@ -11,26 +11,27 @@ function View() {
 		const fetchCount = async () => {
 			const hasViewed = localStorage.getItem("hasViewed");
 			const countRef = ref(db, "viewCount");
-			console.log(hasViewed);
+
+			const formatter = new Intl.NumberFormat("en", {
+				notation: "compact",
+				compactDisplay: "short",
+			});
 
 			try {
 				const snapshot = await get(countRef);
 				const data = snapshot.val();
-				console.log(data, "data");
 				const currentCount = data?.count || 0;
 
 				// Update UI
-				setCount(currentCount);
-				console.log("Fetched count:", currentCount);
+				setCount(formatter.format(currentCount));
 
 				// Increment only if user hasn't viewed yet
 				if (!hasViewed) {
 					const newCount = currentCount + 1;
 					await set(countRef, { count: newCount });
 					localStorage.setItem("hasViewed", "true");
-					setCount(newCount);
-					console.log(count);
-					console.log("Updated count:", newCount);
+
+					setCount(formatter.format(newCount));
 				}
 			} catch (error) {
 				console.error("Error fetching or updating view count:", error);
