@@ -62,7 +62,7 @@ function View() {
 		// Poll every 10 seconds to update the count
 		intervalId = setInterval(() => {
 			fetchCount();
-		}, 100); // every 10 seconds
+		}, 100); // every 100 milliseconds
 
 		// Clear interval when component unmounts
 		return () => clearInterval(intervalId);
