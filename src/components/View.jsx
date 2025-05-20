@@ -41,11 +41,41 @@ function View() {
 		fetchCount();
 	}, []);
 
+	useEffect(() => {
+		const flag = localStorage.getItem("hasViewed");
+		if (flag) {
+			const interval = setInterval(async () => {
+				const countRef = ref(db, "viewCount");
+
+				const formatter = new Intl.NumberFormat("en", {
+					notation: "compact",
+					compactDisplay: "short",
+				});
+
+				try {
+					const snapshot = await get(countRef);
+					const data = snapshot.val();
+					const currentCount = data?.count || 0;
+
+					// Update UI
+					setCount(formatter.format(currentCount));
+				} catch (error) {
+					console.error("Error fetching or updating view count:", error);
+				}
+			}, 1000);
+
+			return () => clearInterval(interval);
+		}
+	});
 	return (
-		<div className="view">
-			<img src="view.png" alt="view" />
-			<span>{count}</span>
-		</div>
+		<>
+			{count ? (
+				<div className="view">
+					<img src="view.png" alt="view" />
+					<span>{count}</span>
+				</div>
+			) : null}
+		</>
 	);
 }
 
