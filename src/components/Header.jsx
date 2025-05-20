@@ -3,7 +3,7 @@ import "../App.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import Tausif_Anwer_Resume from "../assets/TAUSIF ANWER Resume De2.pdf";
+// import Tausif_Anwer_Resume from "../TAUSIF ANWER Resume De2.pdf";
 import View from "./View";
 function Header() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
@@ -42,7 +42,10 @@ function Header() {
 								</Link>
 							</nav>
 							<div className="Resume">
-								<a href={Tausif_Anwer_Resume} download="Tausif Anwer Resume">
+								<a
+									href="/TAUSIF ANWER Resume De2.pdf"
+									download="Tausif Anwer Resume"
+								>
 									Resume
 								</a>
 							</div>

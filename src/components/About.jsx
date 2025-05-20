@@ -4,7 +4,7 @@ import tpa from "../assets/turnpike.jpeg";
 import cn from "../assets/coding ninjas.png";
 import { Link, useLocation } from "react-router-dom";
 import AboutContact from "./AboutContact";
-import Tausif_Anwer_Resume from "../assets/TAUSIF ANWER Resume De2.pdf";
+// import Tausif_Anwer_Resume from "../assets/TAUSIF ANWER Resume De2.pdf";
 function About() {
 	const location = useLocation();
 
@@ -58,7 +58,7 @@ function About() {
 							</svg>
 						</a>
 						<a
-							href={Tausif_Anwer_Resume}
+							href="/TAUSIF ANWER Resume De2.pdf"
 							download="Tausif Anwer Resume"
 							className="profile-resume"
 						>
