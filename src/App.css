@@ -61,6 +61,14 @@
 
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
 nav {
     display: flex;
     gap: 0.8rem;
@@ -717,6 +725,22 @@ nav>a {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+}
+
+/* View */
+.view {
+    display: flex;
+    border: 1.5px solid rgba(126, 124, 124, 0.505);
+    max-width: 4rem;
+    min-width: 3.5rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+}
+
+.view>img {
+    width: 16px;
+    height: 16px;
 }
 
 @media (max-width: 1024px) {

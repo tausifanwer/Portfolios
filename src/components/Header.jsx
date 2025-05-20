@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Tausif_Anwer_Resume from "../assets/TAUSIF ANWER Resume De2.pdf";
+import View from "./View";
 function Header() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const handleToggleNav = () => {
@@ -20,7 +21,9 @@ function Header() {
 					<Link to="/">
 						<h1>Tausif Anwer</h1>
 					</Link>
+					<View />
 				</div>
+
 				<div className={` nav-super-container ${isNavOpen ? "on" : "off"}`}>
 					<div className={`nav-container`}>
 						<div className="nav">
