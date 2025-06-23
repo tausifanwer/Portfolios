@@ -32,10 +32,10 @@ function Header() {
 									Home
 								</Link>
 								<Link to="/skill" onClick={closeNav}>
-									Skill
+									Skills
 								</Link>
 								<Link to="/project" onClick={closeNav}>
-									Project
+									Projects
 								</Link>
 								<Link to="/about" onClick={closeNav}>
 									About
