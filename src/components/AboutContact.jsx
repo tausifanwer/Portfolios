@@ -84,7 +84,7 @@ function AboutContact() {
 							</svg>
 						</sup>
 					) : (
-						<sup onClick={() => handleCopy("number")}>
+						<sup onClick={() => handleCopy("number")} className="cursor-pointer">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
