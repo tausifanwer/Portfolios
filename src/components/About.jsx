@@ -2,6 +2,7 @@ import React from "react";
 import profileImg from "../assets/profile pic.png";
 import tpa from "../assets/turnpike.jpeg";
 import cn from "../assets/coding ninjas.png";
+import cr from "../assets/clearbothk_logo.jpeg";
 import { Link, useLocation } from "react-router-dom";
 import AboutContact from "./AboutContact";
 // import Tausif_Anwer_Resume from "../assets/TAUSIF ANWER Resume De2.pdf";
@@ -79,6 +80,18 @@ function About() {
 				<div className="profile-experience">
 					<h3>Experience</h3>
 					<div className="exp-1 exp">
+						<img src={cr} alt="" className="w-[100px]" />
+						<div className="exp-details">
+							<div className="exp-details-company">
+								<span>Clear Robotics</span>
+								<span>June-2025 - Present</span>
+							</div>
+							<p>
+								At Clearbot, I built and optimized backend and frontend solutions using GraphQL, REST APIs, Next.js, and TypeScript, with PostgreSQL and Prisma for data management. I delivered features like create/reset password, improved UI/UX for 20% higher user engagement, and reduced authentication issues by 30%. Additionally, I integrated Google Maps path visualization to support mission planning, improving operational efficiency and ensuring scalable, reliable, and user-friendly systems.
+							</p>
+						</div>
+					</div>
+					<div className="exp-2 exp">
 						<img src={tpa} alt="" className="w-[100px]" />
 						<div className="exp-details">
 							<div className="exp-details-company">
@@ -93,7 +106,7 @@ function About() {
 							</p>
 						</div>
 					</div>
-					<div className="exp-2 exp ">
+					<div className="exp-3 exp ">
 						<img src={cn} alt="" className="w-[100px] rounded-2xl" />
 						<div className="exp-details">
 							<div className="exp-details-company">
