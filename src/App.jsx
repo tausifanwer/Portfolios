@@ -7,8 +7,12 @@ import Project from "./components/Project";
 import ScrollToTop from "./components/ScrollTop";
 import Skill from "./components/Skill";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Clarity from "@microsoft/clarity";
+import { useEffect } from "react";
 function App() {
+	useEffect(() => {
+		Clarity.start("tryoy1tbes");
+	}, []);
 	return (
 		<Router>
 			<Header></Header>
