@@ -11,7 +11,7 @@ import Clarity from "@microsoft/clarity";
 import { useEffect } from "react";
 function App() {
 	useEffect(() => {
-		Clarity.start("tryoy1tbes");
+		Clarity.init("tryoy1tbes");
 	}, []);
 	return (
 		<Router>
