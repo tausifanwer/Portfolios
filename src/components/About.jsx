@@ -59,7 +59,7 @@ function About() {
 							</svg>
 						</a>
 						<a
-							href="/TAUSIF ANWER Resume De2.pdf"
+							href="/TAUSIF ANWER Resume De3.pdf"
 							download="Tausif Anwer Resume"
 							className="profile-resume"
 						>
