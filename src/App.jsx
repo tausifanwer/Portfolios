@@ -9,12 +9,24 @@ import Skill from "./components/Skill";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Clarity from "@microsoft/clarity";
 import { useEffect } from "react";
+import Snowfall from "react-snowfall";
 function App() {
 	useEffect(() => {
 		Clarity.init("tryoy1tbes");
 	}, []);
 	return (
 		<Router>
+			<Snowfall
+				color="#87CEFA"
+				snowflakeCount={120}
+				style={{
+					position: "fixed",
+					width: "100vw",
+					height: "100vh",
+					zIndex: 9999,
+					pointerEvents: "none", // important
+				}}
+			/>
 			<Header></Header>
 			<ScrollToTop />
 
