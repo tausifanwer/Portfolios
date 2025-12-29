@@ -16,7 +16,7 @@ function App() {
 	}, []);
 	return (
 		<Router>
-			<Snowfall
+			{/* <Snowfall
 				color="#87CEFA"
 				snowflakeCount={120}
 				style={{
@@ -26,7 +26,7 @@ function App() {
 					zIndex: 9999,
 					pointerEvents: "none", // important
 				}}
-			/>
+			/> */}
 			<Header></Header>
 			<ScrollToTop />
 

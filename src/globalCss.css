@@ -1,0 +1,15 @@
+html[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+}
+
+html[data-theme="light"] {
+    --text-color: black;
+    --bg-color: white;
+}
+
+html,
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
