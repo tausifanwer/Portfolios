@@ -793,6 +793,10 @@ nav>a {
     height: 16px;
 }
 
+.mobileView {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .header-container {
 
@@ -821,6 +825,12 @@ nav>a {
         padding: 9vw;
 
     }
+
+    .mobileView {
+        display: block;
+
+    }
+
 
     .nav {
         flex-direction: column;
