@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
@@ -17,6 +17,17 @@ function Header() {
 		setIsNavOpen(false);
 	};
 
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 1024);
+		};
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	})
 	return (
 		<div className="header-container">
 			<div className="header">
@@ -53,13 +64,16 @@ function Header() {
 										Resume
 									</a>
 								</div>
-								<div className="theme" style={{ padding: "0.4rem" }}>
-									<Switcher2
-										checked={isDark}
-										onToggle={toggleTheme}
-									/>
-									{console.log(isDark)}
-								</div>
+								{
+									isMobile ? (
+										null
+									) : (<div className="theme" style={{ padding: "0.4rem" }}>
+										<Switcher2
+											checked={isDark}
+											onToggle={toggleTheme}
+										/>
+									</div>)
+								}
 							</div>
 						</div>
 						<div className="close" onClick={handleToggleNav}>
@@ -67,8 +81,16 @@ function Header() {
 						</div>
 					</div>
 				</div>
-				<div className="hamburger" onClick={handleToggleNav}>
-					<RxHamburgerMenu />
+				<div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+					<div className="theme mobileView" style={{ padding: "0.4rem" }}>
+						<Switcher2
+							checked={isDark}
+							onToggle={toggleTheme}
+						/>
+					</div>
+					<div className="hamburger" onClick={handleToggleNav}>
+						<RxHamburgerMenu />
+					</div>
 				</div>
 			</div>
 		</div>
