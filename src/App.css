@@ -10,11 +10,15 @@
 [data-theme="dark"] {
     --text: #b01f1f;
     --scroll: linear-gradient(transparent, #b01f1f);
+    --bg: black;
+    --texts: white;
 }
 
 [data-theme="light"] {
     --text: #6ac3f0;
     --scroll: linear-gradient(transparent, #6ac3f0);
+    --bg: white;
+    --texts: black;
 }
 
 
@@ -816,7 +820,7 @@ nav>a {
         width: 100vw;
         height: 100vh;
         z-index: 100;
-        background-color: white;
+        background-color: var(--bg);
         color: black;
         top: 0;
         left: 0;
@@ -837,6 +841,7 @@ nav>a {
         align-items: unset;
         justify-content: unset;
         gap: 28px;
+        color: var(--texts);
     }
 
     nav {
