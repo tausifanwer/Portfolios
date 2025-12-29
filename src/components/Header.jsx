@@ -5,7 +5,10 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 // import Tausif_Anwer_Resume from "../TAUSIF ANWER Resume De2.pdf";
 import View from "./View";
+import Switcher2 from "./ToggleButton";
+import { useTheme } from "../context/ThemeContext";
 function Header() {
+	const { isDark, toggleTheme } = useTheme();
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const handleToggleNav = () => {
 		setIsNavOpen(!isNavOpen);
@@ -41,13 +44,22 @@ function Header() {
 									About
 								</Link>
 							</nav>
-							<div className="Resume">
-								<a
-									href="/TAUSIF ANWER Resume De3.pdf"
-									download="Tausif Anwer Resume"
-								>
-									Resume
-								</a>
+							<div style={{ display: "flex", gap: "2rem" }}>
+								<div className="Resume">
+									<a
+										href="/TAUSIF ANWER Resume De3.pdf"
+										download="Tausif Anwer Resume"
+									>
+										Resume
+									</a>
+								</div>
+								<div className="theme" style={{ padding: "0.4rem" }}>
+									<Switcher2
+										checked={isDark}
+										onToggle={toggleTheme}
+									/>
+									{console.log(isDark)}
+								</div>
 							</div>
 						</div>
 						<div className="close" onClick={handleToggleNav}>

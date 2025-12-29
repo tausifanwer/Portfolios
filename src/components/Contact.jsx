@@ -14,7 +14,7 @@ function Contact() {
 			<a href="mailto:tausifanwer89@gmail.com" target="_blank">
 				<img src={gmail} alt="" />
 			</a>
-			<a href="https://github.com/tausifanwer" target="_blank">
+			<a id="git" href="https://github.com/tausifanwer" target="_blank">
 				<img src={gitHub} alt="" />
 			</a>
 		</div>
