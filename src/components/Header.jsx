@@ -27,7 +27,7 @@ function Header() {
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
-	})
+	}, [isMobile])
 	return (
 		<div className="header-container">
 			<div className="header">
@@ -77,7 +77,7 @@ function Header() {
 							</div>
 						</div>
 						<div className="close" onClick={handleToggleNav}>
-							<IoCloseSharp />
+							<IoCloseSharp color={isDark ? "white" : "black"} />
 						</div>
 					</div>
 				</div>
