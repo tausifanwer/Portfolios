@@ -12,6 +12,7 @@
     --scroll: linear-gradient(transparent, #b01f1f);
     --bg: black;
     --texts: white;
+    --about-hover: 4px 4px 0px #ffffffdf;
 }
 
 [data-theme="light"] {
@@ -19,6 +20,7 @@
     --scroll: linear-gradient(transparent, #6ac3f0);
     --bg: white;
     --texts: black;
+    --about-hover: 4px 4px 0px #0e0d0ddf;
 }
 
 
@@ -643,7 +645,7 @@ nav>a {
 .exp:hover {
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow: 4px 4px 0px #000000df;
+    box-shadow: var(--about-hover);
 }
 
 .exp>img {
