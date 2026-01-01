@@ -1,5 +1,5 @@
 import React from "react";
-import profileImg from "../assets/profile pic.png";
+import profileImg from "../assets/profile pic 2.png";
 import tpa from "../assets/turnpike.jpeg";
 import cn from "../assets/coding ninjas.png";
 import cr from "../assets/clearbothk_logo.jpeg";
