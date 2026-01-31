@@ -1,6 +1,7 @@
-name: DEPLOYMENT PIPELINE
+name: PR BUILD CHECKS
+
 on:
-  push:
+  pull_request:
     branches:
       - main
 jobs:
@@ -16,7 +17,5 @@ jobs:
           cache: 'npm'
       - name: Install Dependencies
         run: npm install
-      - name: Build Project
+      - name: Run Build
         run: npm run build
-      - name: Trigger Netlify Deployment
-        run: curl -X POST -d {} ${{secrets.NETLIFY_DEPLOY_HOOK}}
