@@ -1,4 +1,6 @@
 name: PR BUILD CHECKS
+permissions:
+  contents: read
 
 on:
   pull_request:
