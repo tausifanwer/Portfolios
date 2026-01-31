@@ -19,4 +19,5 @@ jobs:
       - name: Build Project
         run: npm run build
       - name: Trigger Netlify Deployment
-        run: curl -X POST -d {} ${{secrets.NETLIFY_DEPLOY_HOOK}}
+      run: | 
+      curl -X POST -d {}{{secrets.}}
