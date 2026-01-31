@@ -82,7 +82,7 @@ function About() {
 				<div className="profile-experience">
 					<h3>Experience</h3>
 					<div className="exp-1 exp">
-						<img src={cr} alt="" className="w-[100px]" />
+						<img src={cr} alt="" className="w-25" />
 						<div className="exp-details">
 							<div className="exp-details-company">
 								<span>Clear Robotics</span>
@@ -94,7 +94,7 @@ function About() {
 						</div>
 					</div>
 					<div className="exp-2 exp">
-						<img src={tpa} alt="" className="w-[100px]" />
+						<img src={tpa} alt="" className="w-25" />
 						<div className="exp-details">
 							<div className="exp-details-company">
 								<span>TurnPike Analyst</span>
@@ -109,7 +109,7 @@ function About() {
 						</div>
 					</div>
 					<div className="exp-3 exp ">
-						<img src={cn} alt="" className="w-[100px] rounded-2xl" />
+						<img src={cn} alt="" className="w-25 rounded-2xl" />
 						<div className="exp-details">
 							<div className="exp-details-company">
 								<span>Coding Ninjas</span>
