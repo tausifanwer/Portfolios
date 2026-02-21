@@ -5,6 +5,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 // import Tausif_Anwer_Resume from "../TAUSIF ANWER Resume De2.pdf";
 import View from "./View";
+import { CiLight, CiDark } from "react-icons/ci";
 import Switcher2 from "./ToggleButton";
 import { useTheme } from "../context/ThemeContext";
 function Header() {
@@ -27,7 +28,7 @@ function Header() {
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
-	}, [isMobile])
+	}, [])
 	return (
 		<div className="header-container">
 			<div className="header">
@@ -55,7 +56,7 @@ function Header() {
 									About
 								</Link>
 							</nav>
-							<div style={{ display: "flex", gap: "2rem" }}>
+							<div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
 								<div className="Resume">
 									<a
 										href="/TAUSIF ANWER Resume De3.pdf"
@@ -81,7 +82,7 @@ function Header() {
 						</div>
 					</div>
 				</div>
-				<div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+				<div style={{ display: "flex", alignItems: "center", gap: isMobile ? "1rem" : "2rem" }}>
 					<div className="theme mobileView" style={{ padding: "0.4rem" }}>
 						<Switcher2
 							checked={isDark}
