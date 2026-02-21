@@ -8,6 +8,12 @@ import View from "./View";
 import { CiLight, CiDark } from "react-icons/ci";
 import Switcher2 from "./ToggleButton";
 import { useTheme } from "../context/ThemeContext";
+/**
+ * Render the top navigation bar with logo, navigation links, a resume download link, theme controls, and a responsive mobile menu.
+ * 
+ * The header adapts its layout based on viewport width, provides toggling for the mobile navigation, and reflects the current theme state.
+ * @returns {JSX.Element} The header element containing navigation, theme switcher controls, and responsive controls (hamburger/close).
+ */
 function Header() {
 	const { isDark, toggleTheme } = useTheme();
 	const [isNavOpen, setIsNavOpen] = useState(false);
