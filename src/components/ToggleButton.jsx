@@ -8,6 +8,7 @@ const Switcher2 = ({ checked, onToggle }) => {
                     checked={checked}
                     onChange={onToggle}
                     className="sr-only"
+                    aria-label={checked ? "Switch to light mode" : "Switch to dark mode"}
                 />
 
                 {checked ? (

@@ -18,7 +18,7 @@ function Header() {
 		setIsNavOpen(false);
 	};
 
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+	const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
 	useEffect(() => {
 		const handleResize = () => {
