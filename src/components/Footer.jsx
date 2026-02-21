@@ -1,9 +1,10 @@
 import React from "react";
 
+const currentYear = new Date().getFullYear();
 function Footer() {
 	return (
 		<div className="footer flex">
-			<div>© 2025 - Made by Tausif Anwer.</div>
+			<div>© {currentYear} - Made by Tausif Anwer</div>
 			<div className="available">
 				<span className="animate-pulse"></span>Available for Hire
 			</div>
@@ -11,4 +12,4 @@ function Footer() {
 	);
 }
 
-export default Footer;
+export default React.memo(Footer);
