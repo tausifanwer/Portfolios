@@ -114,6 +114,10 @@ nav {
 
 }
 
+.theme:hover {
+    backdrop-filter: drop-shadow(4px 4px 10px #aba8a1) !important;
+}
+
 .header h1 {
     font-size: 1.7rem;
     font-weight: 700;
