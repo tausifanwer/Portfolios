@@ -5,7 +5,6 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 // import Tausif_Anwer_Resume from "../TAUSIF ANWER Resume De2.pdf";
 import View from "./View";
-import { CiLight, CiDark } from "react-icons/ci";
 import Switcher2 from "./ToggleButton";
 import { useTheme } from "../context/ThemeContext";
 /**
@@ -74,7 +73,7 @@ function Header() {
 								{
 									isMobile ? (
 										null
-									) : (<div className="theme" style={{ padding: "0.4rem" }}>
+									) : (<div className="theme" style={{ padding: "0.4rem", backdropFilter: "drop-shadow(4px 4px 10px white )", borderRadius: "50%" }}>
 										<Switcher2
 											checked={isDark}
 											onToggle={toggleTheme}
@@ -89,7 +88,7 @@ function Header() {
 					</div>
 				</div>
 				<div style={{ display: "flex", alignItems: "center", gap: isMobile ? "1rem" : "2rem" }}>
-					<div className="theme mobileView" style={{ padding: "0.4rem" }}>
+					<div className="theme mobileView" style={{ padding: "0.4rem", backdropFilter: "drop-shadow(4px 4px 10px white )", borderRadius: "50%" }} >
 						<Switcher2
 							checked={isDark}
 							onToggle={toggleTheme}
@@ -100,7 +99,7 @@ function Header() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</div >
 	);
 }
 
