@@ -73,7 +73,7 @@ function Header() {
 								{
 									isMobile ? (
 										null
-									) : (<div className="theme" style={{ padding: "0.4rem", backdropFilter: "drop-shadow(4px 4px 10px white )", borderRadius: "50%" }}>
+									) : (<div className="theme desktop" style={{ padding: "0.4rem", backdropFilter: "drop-shadow(4px 4px 10px #b1b4ba )", borderRadius: "50%" }}>
 										<Switcher2
 											checked={isDark}
 											onToggle={toggleTheme}
@@ -88,7 +88,7 @@ function Header() {
 					</div>
 				</div>
 				<div style={{ display: "flex", alignItems: "center", gap: isMobile ? "1rem" : "2rem" }}>
-					<div className="theme mobileView" style={{ padding: "0.4rem", backdropFilter: "drop-shadow(4px 4px 10px white )", borderRadius: "50%" }} >
+					<div className="theme mobileView" style={{ padding: "0.4rem", backdropFilter: "drop-shadow(4px 4px 10px #b1b4ba )", borderRadius: "50%" }} >
 						<Switcher2
 							checked={isDark}
 							onToggle={toggleTheme}

@@ -114,8 +114,8 @@ nav {
 
 }
 
-.theme:hover {
-    backdrop-filter: drop-shadow(4px 4px 10px #aba8a1) !important;
+.desktop:hover {
+    backdrop-filter: drop-shadow(4px 4px 10px #858181) !important;
 }
 
 .header h1 {
