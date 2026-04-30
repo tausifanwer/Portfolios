@@ -3,16 +3,10 @@ import "../App.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-// import Tausif_Anwer_Resume from "../TAUSIF ANWER Resume De2.pdf";
 import View from "./View";
 import Switcher2 from "./ToggleButton";
 import { useTheme } from "../context/ThemeContext";
-/**
- * Render the top navigation bar with logo, navigation links, a resume download link, theme controls, and a responsive mobile menu.
- * 
- * The header adapts its layout based on viewport width, provides toggling for the mobile navigation, and reflects the current theme state.
- * @returns {JSX.Element} The header element containing navigation, theme switcher controls, and responsive controls (hamburger/close).
- */
+
 function Header() {
 	const { isDark, toggleTheme } = useTheme();
 	const [isNavOpen, setIsNavOpen] = useState(false);
@@ -64,7 +58,7 @@ function Header() {
 							<div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
 								<div className="Resume">
 									<a
-										href="/TAUSIF ANWER Resume De3.pdf"
+										href="/TAUSIF ANWER Resume De4.pdf"
 										download="Tausif Anwer Resume"
 									>
 										Resume
